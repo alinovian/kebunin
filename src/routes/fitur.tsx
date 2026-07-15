@@ -48,9 +48,9 @@ export const Route = createFileRoute("/fitur")({
       { name: "description", content: "Scan daun AI, jadwal rawat otomatis, knowledge base bebas halusinasi, toko peralatan, dan sistem koin." },
       { property: "og:title", content: "Fitur Lengkap Kebunin" },
       { property: "og:description", content: "Semua fitur yang membantumu menjadi gardener urban yang andal." },
-      { property: "og:url", content: "https://kebunin.lovable.app/fitur" },
+      { property: "og:url", content: "https://kebunin.vercel.app/fitur" },
     ],
-    links: [{ rel: "canonical", href: "https://kebunin.lovable.app/fitur" }],
+    links: [{ rel: "canonical", href: "https://kebunin.vercel.app/fitur" }],
   }),
   component: FiturPage,
 });

@@ -48,9 +48,9 @@ export const Route = createFileRoute("/tentang")({
       { name: "description", content: "Misi Kebunin: membuat berkebun urban jadi mudah, menyenangkan, dan dapat diakses semua orang lewat AI." },
       { property: "og:title", content: "Tentang Kebunin" },
       { property: "og:description", content: "Kenalan dengan misi dan nilai-nilai di balik Kebunin." },
-      { property: "og:url", content: "https://kebunin.lovable.app/tentang" },
+      { property: "og:url", content: "https://kebunin.vercel.app/tentang" },
     ],
-    links: [{ rel: "canonical", href: "https://kebunin.lovable.app/tentang" }],
+    links: [{ rel: "canonical", href: "https://kebunin.vercel.app/tentang" }],
   }),
   component: Tentang,
 });

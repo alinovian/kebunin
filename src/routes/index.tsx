@@ -51,9 +51,9 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "Pindai daun, dapatkan diagnosis AI tervalidasi, dan rawat tanamanmu dengan jadwal otomatis. Gratis, mobile-first." },
       { property: "og:title", content: "Kebunin | Asisten Berkebun Urban dengan AI" },
       { property: "og:description", content: "Deteksi penyakit daun lewat AI, solusi tervalidasi pakar, jadwal rawat otomatis." },
-      { property: "og:url", content: "https://kebunin.lovable.app/" },
+      { property: "og:url", content: "https://kebunin.vercel.app/" },
     ],
-    links: [{ rel: "canonical", href: "https://kebunin.lovable.app/" }],
+    links: [{ rel: "canonical", href: "https://kebunin.vercel.app/" }],
   }),
   component: Landing,
 });function Landing() {

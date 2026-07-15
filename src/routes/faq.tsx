@@ -10,9 +10,9 @@ export const Route = createFileRoute("/faq")({
       { name: "description", content: "Jawaban atas pertanyaan umum tentang Kebunin: gratis, akurasi AI, jenis tanaman, dan privasi data." },
       { property: "og:title", content: "Pertanyaan Umum Kebunin" },
       { property: "og:description", content: "Semua yang perlu kamu tahu sebelum mulai pakai Kebunin." },
-      { property: "og:url", content: "https://kebunin.lovable.app/faq" },
+      { property: "og:url", content: "https://kebunin.vercel.app/faq" },
     ],
-    links: [{ rel: "canonical", href: "https://kebunin.lovable.app/faq" }],
+    links: [{ rel: "canonical", href: "https://kebunin.vercel.app/faq" }],
     scripts: [
       {
         type: "application/ld+json",

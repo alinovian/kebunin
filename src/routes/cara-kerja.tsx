@@ -48,9 +48,9 @@ export const Route = createFileRoute("/cara-kerja")({
       { name: "description", content: "4 langkah mudah: foto daun, AI analisis, dapatkan solusi, ikuti jadwal rawat otomatis." },
       { property: "og:title", content: "Cara Kerja Kebunin" },
       { property: "og:description", content: "Lihat bagaimana Kebunin membantumu dari diagnosis hingga rawat harian." },
-      { property: "og:url", content: "https://kebunin.lovable.app/cara-kerja" },
+      { property: "og:url", content: "https://kebunin.vercel.app/cara-kerja" },
     ],
-    links: [{ rel: "canonical", href: "https://kebunin.lovable.app/cara-kerja" }],
+    links: [{ rel: "canonical", href: "https://kebunin.vercel.app/cara-kerja" }],
   }),
   component: CaraKerja,
 });
