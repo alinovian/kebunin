@@ -53,6 +53,7 @@ function AuthPage() {
     }
 
     const checkAndRedirect = async (user: any) => {
+      setGoogleLoading(true);
       try {
         const profile = await getOrCreateProfile({
           data: {
@@ -69,6 +70,7 @@ function AuthPage() {
             setName(profile.display_name ?? "");
             setIsGoogleLinking(true);
             setStep("register");
+            setGoogleLoading(false);
           } else {
             // Simpan sesi lokal untuk pengguna Google yang sudah terdaftar
             localStorage.setItem("kebunin_user", JSON.stringify({

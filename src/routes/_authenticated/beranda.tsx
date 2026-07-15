@@ -704,7 +704,7 @@ function Beranda() {
                   }
                   setSelectedPlant(p);
                 }}
-                className="bg-card rounded-2xl p-3 border border-border flex flex-col justify-between relative group cursor-pointer hover:border-primary active:scale-[0.98] transition-all touch-none select-none"
+                className="bg-card rounded-2xl p-3 border border-border flex flex-col justify-between relative group cursor-pointer hover:border-primary active:scale-[0.98] transition-all"
               >
                 <div>
                   <div

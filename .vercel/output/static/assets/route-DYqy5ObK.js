@@ -1,0 +1,1 @@
+import{j as o,O as t}from"./index-lp5eDJLm.js";import{M as s}from"./MobileOnlyGate-MyEPHqUU.js";import"./createLucideIcon-C88M73nO.js";const p=()=>o.jsx(s,{children:o.jsx(t,{})});export{p as component};

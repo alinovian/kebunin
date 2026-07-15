@@ -442,7 +442,7 @@ function JadwalPage() {
                     }
                     setActivePlantId(p.id);
                   }}
-                  className="bg-card rounded-2xl p-4 border border-border flex flex-col justify-between cursor-pointer hover:border-primary active:scale-[0.98] transition-[border-color,transform] duration-200 touch-none select-none"
+                  className="bg-card rounded-2xl p-4 border border-border flex flex-col justify-between cursor-pointer hover:border-primary active:scale-[0.98] transition-[border-color,transform] duration-200"
                 >
                   <div>
                     <div
