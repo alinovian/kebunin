@@ -32,7 +32,7 @@ CREATE TABLE `plant_suggestions` (
   `user_id` varchar(255) NOT NULL,
   `suggested_plant` varchar(255) NOT NULL,
   `suggestion_text` text DEFAULT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -55,7 +55,7 @@ CREATE TABLE `products` (
   `coin` int(11) NOT NULL,
   `image_url` text DEFAULT NULL,
   `description` text DEFAULT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `admin_id` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -94,8 +94,8 @@ CREATE TABLE `profiles` (
   `streak` int(11) NOT NULL DEFAULT 0,
   `level` int(11) NOT NULL DEFAULT 1,
   `xp` int(11) NOT NULL DEFAULT 0,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
-  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `shop_description` text DEFAULT NULL,
   `shop_address` text DEFAULT NULL,
   `shop_whatsapp` varchar(50) DEFAULT NULL,
@@ -136,7 +136,7 @@ CREATE TABLE `scan_history` (
   `confidence` float NOT NULL,
   `summary` text NOT NULL,
   `steps` text NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `recommended_products` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -173,7 +173,7 @@ CREATE TABLE `user_plants` (
   `name` varchar(255) NOT NULL,
   `status` varchar(50) NOT NULL DEFAULT 'Sehat',
   `days` int(11) NOT NULL DEFAULT 1,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `image_url` text DEFAULT NULL,
   `planted_at` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -197,7 +197,7 @@ CREATE TABLE `user_roles` (
   `id` varchar(255) NOT NULL,
   `user_id` varchar(255) NOT NULL,
   `role` enum('super_admin','admin','user') NOT NULL DEFAULT 'user',
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -223,7 +223,7 @@ CREATE TABLE `user_tasks` (
   `type` varchar(50) NOT NULL,
   `curative` tinyint(1) NOT NULL DEFAULT 0,
   `is_done` tinyint(1) NOT NULL DEFAULT 0,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `plant_id` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -245,7 +245,7 @@ CREATE TABLE `wishlist_categories` (
   `id` varchar(255) NOT NULL,
   `user_id` varchar(255) NOT NULL,
   `name` varchar(255) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -267,7 +267,7 @@ CREATE TABLE `wishlist_items` (
   `user_id` varchar(255) NOT NULL,
   `product_id` varchar(255) NOT NULL,
   `category_id` varchar(255) DEFAULT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
