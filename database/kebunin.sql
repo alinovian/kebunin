@@ -12,6 +12,18 @@ START TRANSACTION;
 SET time_zone = "+00:00";
 SET FOREIGN_KEY_CHECKS = 0;
 
+-- Drop tables in correct dependency order
+DROP TABLE IF EXISTS `wishlist_items`;
+DROP TABLE IF EXISTS `wishlist_categories`;
+DROP TABLE IF EXISTS `user_tasks`;
+DROP TABLE IF EXISTS `user_roles`;
+DROP TABLE IF EXISTS `user_plants`;
+DROP TABLE IF EXISTS `scan_history`;
+DROP TABLE IF EXISTS `products`;
+DROP TABLE IF EXISTS `plant_suggestions`;
+DROP TABLE IF EXISTS `profiles`;
+
+
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -28,7 +40,6 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- Table structure for table `plant_suggestions`
 --
 
-DROP TABLE IF EXISTS `plant_suggestions`;
 CREATE TABLE `plant_suggestions` (
   `id` varchar(255) NOT NULL,
   `user_id` varchar(255) NOT NULL,
@@ -50,7 +61,6 @@ INSERT INTO `plant_suggestions` (`id`, `user_id`, `suggested_plant`, `suggestion
 -- Table structure for table `products`
 --
 
-DROP TABLE IF EXISTS `products`;
 CREATE TABLE `products` (
   `id` varchar(255) NOT NULL,
   `name` varchar(255) NOT NULL,
@@ -87,7 +97,6 @@ INSERT INTO `products` (`id`, `name`, `price`, `coin`, `image_url`, `description
 -- Table structure for table `profiles`
 --
 
-DROP TABLE IF EXISTS `profiles`;
 CREATE TABLE `profiles` (
   `id` varchar(255) NOT NULL,
   `display_name` varchar(255) DEFAULT NULL,
@@ -132,7 +141,6 @@ INSERT INTO `profiles` (`id`, `display_name`, `email`, `password_hash`, `avatar_
 -- Table structure for table `scan_history`
 --
 
-DROP TABLE IF EXISTS `scan_history`;
 CREATE TABLE `scan_history` (
   `id` varchar(255) NOT NULL,
   `user_id` varchar(255) NOT NULL,
@@ -172,7 +180,6 @@ INSERT INTO `scan_history` (`id`, `user_id`, `image_url`, `disease`, `confidence
 -- Table structure for table `user_plants`
 --
 
-DROP TABLE IF EXISTS `user_plants`;
 CREATE TABLE `user_plants` (
   `id` varchar(255) NOT NULL,
   `user_id` varchar(255) NOT NULL,
@@ -199,7 +206,6 @@ INSERT INTO `user_plants` (`id`, `user_id`, `name`, `status`, `days`, `created_a
 -- Table structure for table `user_roles`
 --
 
-DROP TABLE IF EXISTS `user_roles`;
 CREATE TABLE `user_roles` (
   `id` varchar(255) NOT NULL,
   `user_id` varchar(255) NOT NULL,
@@ -222,7 +228,6 @@ INSERT INTO `user_roles` (`id`, `user_id`, `role`, `created_at`) VALUES
 -- Table structure for table `user_tasks`
 --
 
-DROP TABLE IF EXISTS `user_tasks`;
 CREATE TABLE `user_tasks` (
   `id` varchar(255) NOT NULL,
   `user_id` varchar(255) NOT NULL,
@@ -249,7 +254,6 @@ INSERT INTO `user_tasks` (`id`, `user_id`, `time`, `title`, `type`, `curative`, 
 -- Table structure for table `wishlist_categories`
 --
 
-DROP TABLE IF EXISTS `wishlist_categories`;
 CREATE TABLE `wishlist_categories` (
   `id` varchar(255) NOT NULL,
   `user_id` varchar(255) NOT NULL,
@@ -271,7 +275,6 @@ INSERT INTO `wishlist_categories` (`id`, `user_id`, `name`, `created_at`) VALUES
 -- Table structure for table `wishlist_items`
 --
 
-DROP TABLE IF EXISTS `wishlist_items`;
 CREATE TABLE `wishlist_items` (
   `id` varchar(255) NOT NULL,
   `user_id` varchar(255) NOT NULL,
