@@ -51,8 +51,10 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "Pindai daun, dapatkan diagnosis AI tervalidasi, dan rawat tanamanmu dengan jadwal otomatis. Gratis, mobile-first." },
       { property: "og:title", content: "Kebunin | Asisten Berkebun Urban dengan AI" },
       { property: "og:description", content: "Deteksi penyakit daun lewat AI, solusi tervalidasi pakar, jadwal rawat otomatis." },
+      // TODO: Ganti domain di bawah jika menggunakan custom domain baru (misal: https://kebunin.id/)
       { property: "og:url", content: "https://kebunin.vercel.app/" },
     ],
+    // TODO: Ganti domain di bawah jika menggunakan custom domain baru (misal: https://kebunin.id/)
     links: [{ rel: "canonical", href: "https://kebunin.vercel.app/" }],
   }),
   component: Landing,

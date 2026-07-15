@@ -48,8 +48,10 @@ export const Route = createFileRoute("/cara-kerja")({
       { name: "description", content: "4 langkah mudah: foto daun, AI analisis, dapatkan solusi, ikuti jadwal rawat otomatis." },
       { property: "og:title", content: "Cara Kerja Kebunin" },
       { property: "og:description", content: "Lihat bagaimana Kebunin membantumu dari diagnosis hingga rawat harian." },
+      // TODO: Ganti domain di bawah jika menggunakan custom domain baru (misal: https://kebunin.id/)
       { property: "og:url", content: "https://kebunin.vercel.app/cara-kerja" },
     ],
+    // TODO: Ganti domain di bawah jika menggunakan custom domain baru (misal: https://kebunin.id/)
     links: [{ rel: "canonical", href: "https://kebunin.vercel.app/cara-kerja" }],
   }),
   component: CaraKerja,

@@ -10,8 +10,10 @@ export const Route = createFileRoute("/faq")({
       { name: "description", content: "Jawaban atas pertanyaan umum tentang Kebunin: gratis, akurasi AI, jenis tanaman, dan privasi data." },
       { property: "og:title", content: "Pertanyaan Umum Kebunin" },
       { property: "og:description", content: "Semua yang perlu kamu tahu sebelum mulai pakai Kebunin." },
+      // TODO: Ganti domain di bawah jika menggunakan custom domain baru (misal: https://kebunin.id/)
       { property: "og:url", content: "https://kebunin.vercel.app/faq" },
     ],
+    // TODO: Ganti domain di bawah jika menggunakan custom domain baru (misal: https://kebunin.id/)
     links: [{ rel: "canonical", href: "https://kebunin.vercel.app/faq" }],
     scripts: [
       {
