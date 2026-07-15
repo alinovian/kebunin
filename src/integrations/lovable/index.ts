@@ -1,0 +1,2 @@
+// Lovable integration removed
+export {};

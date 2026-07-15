@@ -1,0 +1,104 @@
+@import "tailwindcss" source(none);
+@import "tw-animate-css";
+
+@source "../src";
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-dark: var(--primary-dark);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-soft: var(--accent-soft);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+}
+
+:root {
+  --radius: 0.875rem;
+  /* Kebunin teal palette */
+  --primary-dark: oklch(0.39 0.06 200);     /* #005461 */
+  --primary: oklch(0.5 0.09 195);            /* #0c7779 */
+  --secondary: oklch(0.63 0.11 185);         /* #249e94 */
+  --accent: oklch(0.76 0.12 170);            /* #3bc1a8 */
+  --accent-soft: oklch(0.76 0.12 170 / 0.12);
+
+  --background: oklch(0.99 0.005 180);
+  --foreground: oklch(0.39 0.06 200);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.39 0.06 200);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.39 0.06 200);
+  --primary-foreground: oklch(0.99 0.005 180);
+  --secondary-foreground: oklch(0.99 0.005 180);
+  --accent-foreground: oklch(0.25 0.04 200);
+  --muted: oklch(0.96 0.01 190);
+  --muted-foreground: oklch(0.55 0.03 200);
+  --destructive: oklch(0.6 0.22 27);
+  --destructive-foreground: oklch(0.99 0 0);
+  --success: oklch(0.7 0.15 165);
+  --success-foreground: oklch(0.25 0.04 200);
+  --warning: oklch(0.78 0.15 75);
+  --border: oklch(0.92 0.015 190);
+  --input: oklch(0.92 0.015 190);
+  --ring: oklch(0.5 0.09 195);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html, body {
+    font-family: var(--font-sans);
+    background-color: var(--color-muted);
+    color: var(--color-foreground);
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+  }
+  h1 { font-size: 24px; font-weight: 600; line-height: 1.25; }
+  h2 { font-size: 18px; font-weight: 500; line-height: 1.35; }
+  p  { font-size: 14px; line-height: 1.55; }
+  .caption { font-size: 12px; }
+
+  /* Hide native browser password reveal eye and clear buttons (mainly Edge) */
+  input::-ms-reveal,
+  input::-ms-clear {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+}
+
+@layer utilities {
+  @keyframes page-fade-in {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-page {
+    animation: page-fade-in 0.35s cubic-bezier(0.21, 1.02, 0.43, 1.01) forwards;
+  }
+}
