@@ -14,6 +14,9 @@ export function getDbPool(): mysql.Pool {
     const password = process.env.DB_PASSWORD || "";
     const database = process.env.DB_NAME || "kebunin_v2";
 
+    const isLocal = host === "127.0.0.1" || host === "localhost";
+    const ssl = !isLocal ? { rejectUnauthorized: false } : undefined;
+
     globalThis._mysqlPool = mysql.createPool({
       host,
       port,
@@ -25,6 +28,7 @@ export function getDbPool(): mysql.Pool {
       queueLimit: 0,
       enableKeepAlive: true,
       keepAliveInitialDelay: 0,
+      ssl,
     });
   }
   return globalThis._mysqlPool;
