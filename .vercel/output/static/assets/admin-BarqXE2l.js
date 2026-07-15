@@ -1,1 +1,0 @@
-import{j as t,O as o}from"./index-lp5eDJLm.js";import{D as s}from"./DesktopOnlyGate-DPWYnGee.js";import"./createLucideIcon-C88M73nO.js";const n=()=>t.jsx(s,{children:t.jsx(o,{})});export{n as component};
